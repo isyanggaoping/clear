@@ -137,3 +137,5 @@ if __name__ == '__main__':
     #data = response.json() 如果接口中过来的是json格式的数据
 
     #json获取后和字典使用方式一样，因为他俩格式一样
+
+    #
