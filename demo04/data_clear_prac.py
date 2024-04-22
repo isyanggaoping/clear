@@ -34,4 +34,7 @@ if have_null.any():  # 任意行
     import sys
     sys.exit(1)
 
+
+
+
 print(df)
