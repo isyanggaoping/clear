@@ -136,9 +136,10 @@ if __name__ == '__main__':
     #response = requests.get(url)
     #data = response.json() 如果接口中过来的是json格式的数据
 
-    #json获取后和字典使用方式一样，因为他俩格式一样
+    #json获取到之后，和字典的使用方式一样，格式一样
+    #{'status':sucess,data:[{'name':'aa','age':11},{},{}]},字典的结构是{'status':sucess,data:[{'name':'aa','age':11},{},{}]}
 
-    #
 
-    print('bbbb')
+
+
 
