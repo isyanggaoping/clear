@@ -30,9 +30,8 @@ if __name__ == '__main__':
     current_dir = os.getcwd() + '\\file'
     print(current_dir)
 
-    files_path = []  # 创建一个空列表存储文件路径
     # 如果在此处创建空列表而不是在方法中创建，在递归调用自己时就不会创建新的空列表，就不用files.expend了
-
+    files_path = []  # 创建一个空列表存储文件路径
 
     # 获取所有文件的路径列表
     all_files = get_all_files(current_dir, files_path)
