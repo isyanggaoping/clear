@@ -1,4 +1,5 @@
 import configparser
+#连接postgresql的库
 import psycopg2
 from psycopg2 import Error
 

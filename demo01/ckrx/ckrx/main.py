@@ -1,6 +1,10 @@
 import datetime
 import pandas as pd
 
+
+#对于一个df来说，无论你选取哪几列，对应行的索引都是一样的，比如第一回抽取 前两列是张三的上下班时间 索引是 1号,2号,3号 再抽取第三列，第四列，索引也是索引是 1号,2号,3号
+#竖向合并的时候，索引不会乱，能得到所需的每天没人的上下班时间
+
 ywjs_col = ['日期','姓名','仓库编码','仓库名称','上班时间','下班时间','金额']
 
 def run(sqlengin):
@@ -54,7 +58,10 @@ def run(sqlengin):
         tmp1 = pd.DataFrame([tmp] *((pd.to_datetime(dateend) - pd.to_datetime(datestart)).days + 1))
         df_yw_js_fuzhi = pd.concat([df_yw_js_fuzhi,tmp1])
 
-    #重置索引，准备合并处理的上班时间和姓名
+    #重置索引，准备左右合并处理的上班时间和姓名  横向合并两个df时必须重置索引，因为横向是按索引合并的
+    #关联两个df和上述道理一样，关联条件就相当于两个df的索引，比如按上边的，就可以把关联条件置为索引列，然后直接横向拼接两个df效果一样
+    #df1.join(df2)是基于索引的合并，df2必须是df1的子集，索引要匹配，df2的索引df1都要有才行
+
     df_yw_js_czsy = df_yw_js_fuzhi.reset_index(drop=True)
     df_yw_js_sxb_new = df_yw_js_sxb_new.reset_index()
     df_yw_js_sxb_new.rename(columns={'index':'日期'},inplace=True)
