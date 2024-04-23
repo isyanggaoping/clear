@@ -25,7 +25,7 @@ df = df[df['maxincome'] == df['income']]
 # df['age'] = df['age'].fillna(22)
 
 # 空值删除
-df.dropna(subset=['name', 'age'], how='all', inplace=True)
+df.dropna(subset=['name', 'age'], how='any', inplace=True)  # 设置为all时就必须是所有列都为空才会被删除
 
 # 主要列为空，报错并停止程序运行
 have_null = df[['name', 'age', 'email']].isnull().any(axis=1)  # 任一列
