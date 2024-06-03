@@ -22,7 +22,7 @@ if __name__ == '__main__':
     except Exception as e:
         print(e)
         if conn is not None:
-            conn.rollback()
+            cursor.rollback()
 
     cursor.execute('select * from ygp_info')
 
@@ -30,6 +30,8 @@ if __name__ == '__main__':
 
     col = [i[0] for i in cursor.description] #列名列表
     data = [list(row) for row in rows] #数据列表
+
+    # 能转成dateframe的数据格式为 {name:['zs',li'],age:[18,11]} 或 {{zs,14},{ls,13}},
 
     #列表套列表，列表套元祖，字典这两种可以创建Dataframe
     #[[zz,11],[ls,22]] 列名单独一个列表[列名1,列名2]

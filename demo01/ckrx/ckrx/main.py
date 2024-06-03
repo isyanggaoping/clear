@@ -9,7 +9,7 @@ ywjs_col = ['日期','姓名','仓库编码','仓库名称','上班时间','下�
 
 def run(sqlengin):
     #文件目录：读取文件 处理完文件目录
-    read_yw_dir = '/demo01\\ckrx\\new_file\\origin_file\\yw\\'
+    read_yw_dir = '/demo01\\ckrx\\new_file\\origin_file\\oldfile\\'
     read_sd_dir = '/demo01\\ckrx\\new_file\\origin_file\\sd\\'
     write_dir = '/demo01\\ckrx\\new_file\\new_file\\'
 

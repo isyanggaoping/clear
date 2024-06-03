@@ -1,0 +1,11 @@
+'日期': 'work_dt',
+'姓名': 'employee_name',
+'仓库编码': 'warehouse_no',
+'仓库名称': 'warehouse_name',
+'上班时间': 'clock_in_time',
+'下班时间': 'clock_out_time',
+'是否正常': 'is_normal',
+'备注': 'remark',
+'出勤天数': 'attendance_days',
+'时长': 'attendance_duration',
+'金额': 'amount'
